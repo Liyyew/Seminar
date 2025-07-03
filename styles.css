@@ -1,21 +1,27 @@
 /* styles.css */
+/* 全局样式 */
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Garamond', Arial, sans-serif; /* 商务字体，带备用 */
     max-width: 800px;
     margin: 0 auto;
     padding: 20px;
+    color: #333;
 }
 
-.container {
+/* 通用容器样式 */
+.container, .agenda-container {
     margin-top: 40px;
     text-align: center;
+}
+
+/* 二维码和文本布局 */
+.container {
     display: flex;
     justify-content: center;
     align-items: flex-start;
 }
 
 .qrcode-section {
-    text-align: center;
     margin-right: 50px;
 }
 
@@ -37,27 +43,74 @@ body {
     text-align: left;
 }
 
-.invitation-text {
+.invitation-text, .company-name {
     font-size: 18px;
-    color: #333;
     margin-top: 20px;
 }
 
 .company-name {
-    font-size: 18px;
-    color: #333;
-    margin-top: 20px;
     font-weight: bold;
 }
 
+/* 底部样式 */
 .footer {
-    text-align: center;
     margin-top: 50px;
     color: #999;
     font-size: 16px;
 }
 
-/* 响应式设计，确保移动端显示正常 */
+/* 日程表格样式 */
+.agenda-container {
+    background-color: #f9f9f9;
+    border: 1px solid #eee;
+    padding: 25px;
+    border-radius: 8px;
+    margin-bottom: 30px;
+}
+
+.agenda-title {
+    color: #0056b3;
+    font-size: 22px;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+.agenda-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 16px;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.table-header {
+    background-color: #0056b3;
+    color: #fff;
+}
+
+.table-header th, .agenda-table td {
+    padding: 12px;
+    border: 1px solid #ddd;
+    text-align: center;
+}
+
+.table-header th {
+    border-color: #004085;
+}
+
+.coffee-break, .photo-break {
+    background-color: #fffacd;
+    color: #a0522d;
+    font-weight: bold;
+}
+
+.dinner {
+    background-color: #e6f3ff;
+    color: #0056b3;
+    font-weight: bold;
+}
+
+/* 响应式设计：适配移动端 */
 @media (max-width: 600px) {
     .container {
         flex-direction: column;
@@ -72,5 +125,27 @@ body {
     .qrcode {
         width: 100px;
         height: 100px;
+    }
+
+    .agenda-container {
+        padding: 15px;
+        margin: 20px 0;
+    }
+
+    .agenda-title {
+        font-size: 18px;
+        margin-bottom: 15px;
+    }
+
+    .agenda-table {
+        font-size: 14px;
+        display: block;
+        overflow-x: auto;
+        white-space: nowrap;
+    }
+
+    .agenda-table th, .agenda-table td {
+        padding: 8px;
+        min-width: 100px;
     }
 }
