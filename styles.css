@@ -1,0 +1,76 @@
+/* styles.css */
+body {
+    font-family: Arial, sans-serif;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.container {
+    margin-top: 40px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.qrcode-section {
+    text-align: center;
+    margin-right: 50px;
+}
+
+.qrcode {
+    width: 90px;
+    height: 90px;
+    border: 1px solid #ddd;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+.qrcode-text {
+    font-size: 14px;
+    color: #666;
+    margin-top: 10px;
+}
+
+.text-section {
+    text-align: left;
+}
+
+.invitation-text {
+    font-size: 18px;
+    color: #333;
+    margin-top: 20px;
+}
+
+.company-name {
+    font-size: 18px;
+    color: #333;
+    margin-top: 20px;
+    font-weight: bold;
+}
+
+.footer {
+    text-align: center;
+    margin-top: 50px;
+    color: #999;
+    font-size: 16px;
+}
+
+/* 响应式设计，确保移动端显示正常 */
+@media (max-width: 600px) {
+    .container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .qrcode-section {
+        margin-right: 0;
+        margin-bottom: 20px;
+    }
+
+    .qrcode {
+        width: 100px;
+        height: 100px;
+    }
+}
